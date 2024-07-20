@@ -1,0 +1,15 @@
+User: Who uses JPY?
+Bot: The country using Japanese yen (JPY) is Japan.
+
+User: What do they use in Japan?
+Bot: The currency used in Japan is Japanese yen (JPY).
+
+User: Can i buy 23000 EUR?
+Bot: Unfortunately, we do not have 23000.00 EUR.
+
+User: Czy mogę kupić 12000 EUR?
+Bot: Mamy wystarczającą kwotę by sprzedać 12000.00 EUR.
+
+User: quir [-!--------------problematic--------------!-]
+Bot: I don't understand...
+
