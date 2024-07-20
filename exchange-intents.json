@@ -1,0 +1,758 @@
+{
+  "intents": [
+    {
+      "tag": "powitanie",
+      "patterns": [
+        "Czesc",
+        "Hej",
+        "Jak sie masz?",
+        "Czy ktos tu jest?",
+        "Witaj",
+        "Dzien dobry",
+        "Czesc, jak sie masz?",
+        "Hej, jak moge pomoc?",
+        "Witaj, milo cie widziec"
+      ],
+      "responses": [
+        "Hej :)",
+        "Witaj, dziękujemy za odwiedziny!",
+        "Cześć, w czym mogę pomóc?",
+        "Witaj, jak mogę pomóc?"
+      ]
+    },
+    {
+      "tag": "pozegnanie",
+      "patterns": [
+        "Do widzenia",
+        "Do zobaczenia",
+        "Pa",
+        "Czesc, do nastepnego razu",
+        "Do widzenia, milego dnia",
+        "Pa, wroce pozniej"
+      ],
+      "responses": [
+        "Do zobaczenia, dziękujemy za odwiedziny",
+        "Miłego dnia",
+        "Pa! Wracaj wkrótce."
+      ]
+    },
+    {
+      "tag": "dziekuje",
+      "patterns": [
+        "Dziekuje",
+        "Dzieki",
+        "To pomocne",
+        "Dziekuje bardzo",
+        "Wielkie dzieki",
+        "Bardzo dziekuje",
+        "Dziekuje za pomoc",
+        "Dzieki wielkie",
+        "Dzieki za pomoc",
+        "Jestem wdzieczny"
+      ],
+      "responses": [
+        "Z przyjemnością!",
+        "Nie ma za co :)",
+        "Cieszę się, że mogłem pomóc!",
+        "Proszę bardzo!",
+        "Zawsze do usług!"
+      ]
+    },
+    {
+      "tag": "waluty",
+      "patterns": [
+        "Jakie waluty macie?",
+        "Jakie waluty moge wymienic?",
+        "Jakie waluty sa dostepne?",
+        "Na jakie waluty moge wymienic zlotowki?",
+        "Jakie waluty obslugujecie?",
+        "Czy macie funty?",
+        "Czy wymieniacie dolary?",
+        "Czy moge wymienic euro na zlotowki?"
+      ],
+      "responses": [
+        "Mamy USD, EUR, GBP, CHF, JPY, i wiele innych",
+        "Możemy wymienić USD, EUR, GBP, CHF, JPY, i więcej"
+      ]
+    },
+    {
+      "tag": "kursy",
+      "patterns": [
+        "Jaki jest kurs USD?",
+        "Jaki jest kurs GBP?",
+        "Ile dostane za EUR?",
+        "Ile moge dostac za USD?",
+        "Ile jest warta GBP?",
+        "Ile kosztuje NOK?",
+        "Jaki jest kurs EUR?",
+        "Jaki jest obecny kurs JPY?",
+        "Po ile jest CZK?",
+        "Ile jest wart HUF?",
+        "Ile kosztuje wymiana CAD?"
+      ],
+      "responses": ["Podaj proszę walutę, którą chcesz wymienić."]
+    },
+    {
+      "tag": "kraj_waluta",
+      "patterns": [
+        "Jaka waluta obowiazuje w Polsce?",
+        "Jaka walute uzywaja w Belgii?",
+        "Jaka waluta posluguje sie Japonia?",
+        "Jakiej waluty uzywa sie w Australii?",
+        "Waluta w Szwecji",
+        "Jakiej waluty uzywa sie w Szwecja",
+        "Jaka walute maja w Anglii?",
+        "Jakie pieniadze obowiazuja w Danii?",
+        "Jakiej waluty uzywa sie w Meksyku?",
+        "Jaka jest waluta w Norwegii?",
+        "Jaka walute maja w Chinach?",
+        "Czym placi sie w Kanadzie?",
+        "Jaka walute uzywaja w Australii?",
+        "Jakiej waluty uzywa sie w Meksyk",
+        "Jakiej waluty uzywa sie w Japonii?"
+      ],
+      "responses": [
+        "Waluta używana w {country} to {currency_name} ({currency_code}).",
+        "W {country} obowiązuje {currency_name} ({currency_code}).",
+        "{country} używa {currency_name} ({currency_code})."
+      ]
+    },
+    {
+      "tag": "waluta_kraj",
+      "patterns": [
+        "W jakim kraju uzywa sie USD?",
+        "Jaki kraj uzywa GBP?",
+        "Kto uzywa CZK?",
+        "Gdzie korzysta sie z CHF?",
+        "Gdzie uzywa sie EUR?",
+        "Kto uzywa CAD?",
+        "Gdzie obowiazuje AUD?",
+        "W jakim kraju obowiazuje CHF?",
+        "Kto uzywa CZK?",
+        "Jakie kraje uzywaja JPY?",
+        "Gdzie korzysta sie z CAD?",
+        "Gdzie uzywa sie SEK?",
+        "Kto uzywa CZK?",
+        "Gdzie placi sie NOK?",
+        "Kto uzywa DKK?",
+        "Jakie kraje akceptuja CAD?",
+        "Gdzie uzywa sie PLN?",
+        "Jakie kraje uzywaja RUB?",
+        "Kto uzywa PLN?",
+        "Gdzie korzysta sie z SEK?",
+        "Kto uzywa RUB?"
+      ],
+      "responses": [
+        "Waluta USD jest używana w Stanach Zjednoczonych.",
+        "Waluta GBP jest używana w Wielkiej Brytanii.",
+        "Waluta EUR jest używana w wielu krajach europejskich, takich jak Niemcy, Francja, Włochy.",
+        "Waluta JPY jest używana w Japonii.",
+        "Waluta CHF jest używana w Szwajcarii.",
+        "Waluta SEK jest używana w Szwecji.",
+        "Waluta NOK jest używana w Norwegii."
+      ]
+    },
+    {
+      "tag": "godziny_otwarcia",
+      "patterns": [
+        "Jakie sa godziny otwarcia?",
+        "Kiedy jestescie otwarci?",
+        "W jakich godzinach pracujecie?",
+        "Kiedy moge przyjsc?",
+        "W jakich godzinach jestescie dostepni?"
+      ],
+      "responses": [
+        "Jesteśmy otwarci od poniedziałku do piątku od 9:00 do 18:00",
+        "Pracujemy od poniedziałku do piątku w godzinach od 9:00 do 18:00"
+      ]
+    },
+    {
+      "tag": "lokalizacja",
+      "patterns": [
+        "Gdzie sie znajdujecie?",
+        "Gdzie moge was znalezc?",
+        "Gdzie mozna was znalezc?",
+        "Gdzie macie siedzibe?",
+        "Gdzie jestescie?",
+        "Gdzie was szukac?"
+      ],
+      "responses": [
+        "Nasza siedziba znajduje się na ul. Głównej 123, Warszawa",
+        "Możesz nas znaleźć na ul. Głównej 123, Warszawa"
+      ]
+    },
+    {
+      "tag": "metody_platnosci",
+      "patterns": [
+        "Czy akceptujecie karty kredytowe?",
+        "Czy moge zaplacic karta?",
+        "Jakie metody platnosci akceptujecie?",
+        "Czy zaplace karta?",
+        "Moge zaplacic karta?",
+        "Czy moge zaplacic karta?",
+        "Czy mozna placic karta?",
+        "Jak moge zaplacic?"
+      ],
+      "responses": [
+        "Akceptujemy VISA, Mastercard i gotówkę",
+        "Możesz zapłacić kartą VISA, Mastercard lub gotówką"
+      ]
+    },
+    {
+      "tag": "kupno",
+      "patterns": [
+        "Chce kupic 1000 EUR",
+        "Ile kosztuje 150 GBP?",
+        "Kupno 535 USD",
+        "Ile kosztuje kupno 599 CAD?",
+        "Ile zaplace za 150 AUD?",
+        "Kupuje 500 DKK",
+        "Chce kupic 10000 EUR",
+        "Ile kosztuje 15300 GBP?",
+        "Kupno 535 DKK",
+        "Ile kosztuje kupno 599 JPY?",
+        "Ile zaplace za 10 CAD?",
+        "Kupuje 5 AUD",
+        "Ile kosztuje kupno 2000 NOK?",
+        "Chce kupic 5000 SEK",
+        "Kupuje 100 CHF",
+        "Ile kosztuje 7000 CZK?",
+        "Chce kupic 3000 HUF",
+        "Ile zaplace za 400 PLN?",
+        "Kupno 800 RUB",
+        "Ile kosztuje kupno 1000 CNY?",
+        "Chce kupic 2500 BGN",
+        "Ile zaplace za 1500 UAH?",
+        "Kupno 200 ILS",
+        "Ile kosztuje kupno 3000 TRY?",
+        "Chce kupic 5000 GEL",
+        "Ile zaplace za 7000 KRW?",
+        "Kupno 800 EGP",
+        "Ile kosztuje kupno 1000 AED?"
+      ],
+      "responses": ["Za {amount} {currency} musisz zapłacić {cost} PLN."]
+    },
+    {
+      "tag": "sprzedaz",
+      "patterns": [
+        "Chce sprzedac 800 EUR",
+        "Ile dostane za 70 USD?",
+        "Sprzedaz 200 AUD",
+        "Sprzedaje 861 NOK",
+        "Ile dostane za sprzedaz 10000 GBP?",
+        "Sprzedaje 390 EUR",
+        "Chce wymienic 1000 SEK",
+        "Ile dostane za sprzedaz 2000 NOK?",
+        "Sprzedaje 5000 SEK",
+        "Chce sprzedac 100 CHF",
+        "Ile dostane za 7000 CZK?",
+        "Sprzedaje 3000 HUF",
+        "Ile dostane za 400 PLN?",
+        "Sprzedaz 800 RUB",
+        "Ile dostane za sprzedaz 1000 CNY?",
+        "Chce sprzedac 2500 BGN",
+        "Ile dostane za 1500 UAH?",
+        "Sprzedaz 200 ILS",
+        "Ile dostane za sprzedaz 3000 TRY?",
+        "Chce sprzedac 5000 GEL",
+        "Ile dostane za 7000 KRW?",
+        "Sprzedaz 800 EGP",
+        "Ile dostane za sprzedaz 1000 AED?"
+      ],
+      "responses": [
+        "Sprzedając {amount} {currency} otrzymasz {return_amount} PLN."
+      ]
+    },
+    {
+      "tag": "dostepnosc",
+      "patterns": [
+        "Czy macie 800 EUR?",
+        "Moge kupic 7000 USD?",
+        "Macie 200 AUD?",
+        "Moge wymienic 5000 SEK?",
+        "Czy dostepna jest 10000 JPY?",
+        "Macie 1000 USD?",
+        "Czy moge kupic 15000 NOK?",
+        "Macie na stanie 3000 CHF?",
+        "Czy dostepne jest 40000 HUF?",
+        "Moge kupic 50 CAD?",
+        "Czy macie 1500 EUR?",
+        "Moge kupic 10000 USD?",
+        "Czy macie 2500 CHF?",
+        "Czy macie 30000 SEK?",
+        "Macie 5000 NOK?",
+        "Czy macie 20000 HUF?",
+        "Czy macie 100 CAD?",
+        "Moge kupic 2500 AUD?",
+        "Czy macie 5000 JPY?",
+        "Macie 12000 PLN?",
+        "Moge wymienic 300 EUR?",
+        "Czy macie dostepne 2000 NOK?",
+        "Moge kupic 5000 SEK?",
+        "Czy macie 100 CHF?",
+        "Czy dostepne jest 7000 CZK?",
+        "Macie 3000 HUF?",
+        "Czy macie 400 PLN?",
+        "Czy dostepne jest 800 RUB?",
+        "Moge kupic 1000 CNY?",
+        "Czy macie 2500 BGN?",
+        "Moge kupic 1500 UAH?",
+        "Czy macie 200 ILS?",
+        "Czy macie 3000 TRY?",
+        "Moge kupic 5000 GEL?",
+        "Czy dostepne jest 7000 KRW?",
+        "Czy macie 800 EGP?",
+        "Moge kupic 1000 AED?"
+      ],
+      "responses": ["Mamy wystarczającą kwotę by sprzedać {amount} {currency}."]
+    },
+    {
+      "tag": "zarty",
+      "patterns": [
+        "Opowiedz mi zart",
+        "Masz jakis dowcip?",
+        "Powiedz cos smiesznego",
+        "Rozsmiesz mnie",
+        "Opowiedz zart o walutach",
+        "Masz smieszne zarty o kantorze?",
+        "Znasz jakies dowcipy o pieniadzach?",
+        "Znasz jakis smieszny dowcip?"
+      ],
+      "responses": [
+        "Dlaczego dolar nie mógł znaleźć pracy? Bo nie miał odpowiednich kwalifikacji!",
+        "Co mówi jeden euro do drugiego? 'Nie bądź taki drogi!'",
+        "Dlaczego kantor nie może zachować tajemnicy? Bo zawsze wycieka kursy!"
+      ]
+    },
+    {
+      "tag": "numer_telefonu",
+      "patterns": [
+        "Jaki jest numer telefonu do kantoru?",
+        "Jak moge sie z wami skontaktowac telefonicznie?",
+        "Podajcie numer telefonu",
+        "Jak zadzwonic do kantoru?",
+        "Numer telefonu",
+        "Jak moge zadzwonic do was?",
+        "Podacie numer telefonu do waszego kantoru?",
+        "Jaki jest numer do was?"
+      ],
+      "responses": [
+        "Numer telefonu do naszego kantoru to +48 123 456 789.",
+        "Możesz do nas zadzwonić pod numerem +48 123 456 789."
+      ]
+    },
+    {
+      "tag": "co_potrafisz",
+      "patterns": [
+        "Co potrafisz?",
+        "Jakie masz umiejetnosci?",
+        "Co mozesz zrobic?",
+        "Jakie masz funkcje?",
+        "Co umiesz?",
+        "Do czego moge cie uzyc?",
+        "Jakie masz mozliwosci?",
+        "Co mozesz?",
+        "Co mozesz dla mnie zrobic?",
+        "Co moge od ciebie oczekiwac?"
+      ],
+      "responses": [
+        "Mogę odpowiedzieć na pytania dotyczące kursów walut, wymiany walut, dostępności walut, lokalizacji kantoru, godzin otwarcia, metod płatności oraz opowiedzieć żarty.",
+        "Pomogę Ci sprawdzić kursy walut, dostępność walut, informacje o walutach i krajach, lokalizację kantoru, godziny otwarcia i metody płatności.",
+        "Możesz mnie zapytać o kursy walut, wymianę walut, dostępność walut, godziny otwarcia kantoru, lokalizację i metody płatności. Mam też kilka śmiesznych żartów!"
+      ]
+    },
+    {
+      "tag": "kim_jestes",
+      "patterns": [
+        "Kim jestes?",
+        "Kim mozesz byc?",
+        "Kim jestes naprawde?",
+        "Powiedz kim jestes",
+        "Kim wlasciwie jestes?",
+        "Kim jestes bot?",
+        "Kim jestes chatbot?",
+        "Kim jestes naprawde?"
+      ],
+      "responses": [
+        "Jestem chatbotem stworzonym do pomocy w pytaniach dotyczących kursów walut, dostępności walut, lokalizacji kantoru, godzin otwarcia, metod płatności oraz opowiadania żartów.",
+        "Jestem asystentem do spraw wymiany walut. Pomogę Ci znaleźć informacje o kursach, walutach i kantorze.",
+        "Jestem wirtualnym asystentem, który odpowiada na pytania związane z wymianą walut i udziela informacji o naszym kantorze."
+      ]
+    },
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hello",
+        "Hi",
+        "How are you?",
+        "Is anyone there?",
+        "Good day",
+        "Greetings",
+        "Hey there",
+        "Hello, how are you?",
+        "Hi, how can I help?",
+        "Good to see you"
+      ],
+      "responses": [
+        "Hello!",
+        "Hi there!",
+        "Greetings!",
+        "How can I assist you today?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye",
+        "Take care",
+        "See you next time",
+        "Goodbye, have a nice day",
+        "Bye, I'll be back later"
+      ],
+      "responses": ["Goodbye!", "Have a nice day!", "See you soon!"]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Thank you very much",
+        "Thanks a lot",
+        "Thanks a bunch",
+        "Much appreciated",
+        "Thanks for your help",
+        "I'm grateful",
+        "I appreciate it"
+      ],
+      "responses": ["You're welcome!", "Happy to help!", "Anytime!"]
+    },
+    {
+      "tag": "currencies",
+      "patterns": [
+        "What currencies do you have?",
+        "What currencies can I exchange?",
+        "What currencies are available?",
+        "Which currencies can I trade?",
+        "What currencies do you handle?",
+        "Do you have pounds?",
+        "Do you exchange dollars?",
+        "Can I exchange euros to zlotys?"
+      ],
+      "responses": [
+        "We have USD, EUR, GBP, CHF, JPY, and many more.",
+        "We can exchange USD, EUR, GBP, CHF, JPY, and more."
+      ]
+    },
+    {
+      "tag": "exchange_rate",
+      "patterns": [
+        "What is the exchange rate for USD?",
+        "How much for EUR?",
+        "Exchange rate for GBP",
+        "How much will I get for EUR?",
+        "How much can I get for USD?",
+        "What is GBP worth?",
+        "What is the rate for NOK?",
+        "Exchange rate for NOK",
+        "What is the current rate for JPY?",
+        "How much is CZK?",
+        "What is HUF worth?",
+        "How much does it cost to exchange CAD?",
+        "What is the rate for AUD?",
+        "How much for CHF?",
+        "What is the current rate for SEK?",
+        "How much for NOK?",
+        "How much for DKK?",
+        "What is the rate for CAD?",
+        "What is the rate for AUD?",
+        "How much is CZK worth?",
+        "How much for HUF?",
+        "What is the current rate for PLN?"
+      ],
+      "responses": ["Please specify the currency you want to exchange."]
+    },
+    {
+      "tag": "country_currency",
+      "patterns": [
+        "What is the currency of Poland?",
+        "What currency is used in Belgium?",
+        "Currency of Japan?",
+        "What currency do they use in Australia?",
+        "Currency in Sweden",
+        "What currency do they use in Sweden?",
+        "What currency does England have?",
+        "What money do they use in Denmark?",
+        "What currency is used in Mexico?",
+        "What is the currency in Norway?",
+        "What currency do they have in China?",
+        "What do they pay with in Canada?",
+        "What currency do they use in Australia?",
+        "What currency is used in Mexico?",
+        "What currency do they use in Japan?"
+      ],
+      "responses": [
+        "The currency used in {country} is {currency_name} ({currency_code}).",
+        "In {country}, they use {currency_name} ({currency_code}).",
+        "{country} uses {currency_name} ({currency_code})."
+      ]
+    },
+    {
+      "tag": "currency_country",
+      "patterns": [
+        "Where is USD used?",
+        "Which country uses GBP?",
+        "Who uses CZK?",
+        "Where is CHF used?",
+        "Where do they use EUR?",
+        "Who uses CAD?",
+        "Where is AUD used?",
+        "Which country uses CHF?",
+        "Who uses CZK?",
+        "What countries use JPY?",
+        "Where do they use CAD?",
+        "Where is SEK used?",
+        "Who uses CZK?",
+        "Where do they pay with NOK?",
+        "Who uses DKK?",
+        "Which countries accept CAD?",
+        "Where is PLN used?",
+        "What countries use RUB?",
+        "Who uses PLN?",
+        "Where do they use SEK?",
+        "Who uses RUB?"
+      ],
+      "responses": [
+        "The currency USD is used in the United States.",
+        "The currency GBP is used in the United Kingdom.",
+        "The currency EUR is used in many European countries, such as Germany, France, and Italy.",
+        "The currency JPY is used in Japan.",
+        "The currency CHF is used in Switzerland.",
+        "The currency SEK is used in Sweden.",
+        "The currency NOK is used in Norway."
+      ]
+    },
+    {
+      "tag": "opening_hours",
+      "patterns": [
+        "What are your opening hours?",
+        "When are you open?",
+        "Working hours?",
+        "When can I come?",
+        "What hours are you available?"
+      ],
+      "responses": [
+        "We are open Monday to Friday from 9:00 AM to 6:00 PM.",
+        "We work from Monday to Friday from 9:00 AM to 6:00 PM."
+      ]
+    },
+    {
+      "tag": "location",
+      "patterns": [
+        "Where are you located?",
+        "How can I find you?",
+        "Your address?",
+        "Where is your office?",
+        "Where are you?"
+      ],
+      "responses": [
+        "Our office is located at Main Street 123, Warsaw.",
+        "You can find us at Main Street 123, Warsaw."
+      ]
+    },
+    {
+      "tag": "payment_methods",
+      "patterns": [
+        "Do you accept credit cards?",
+        "Can I pay by card?",
+        "Payment options?",
+        "Can I use a credit card?",
+        "Do you take cards?",
+        "Can I pay with a card?",
+        "What payment methods do you accept?",
+        "How can I pay?"
+      ],
+      "responses": [
+        "We accept VISA, Mastercard, and cash.",
+        "You can pay with VISA, Mastercard, or cash."
+      ]
+    },
+    {
+      "tag": "buy_currency",
+      "patterns": [
+        "I want to buy 1000 EUR",
+        "How much for 150 GBP?",
+        "Buying 535 USD",
+        "How much to buy 599 CAD?",
+        "How much for 150 AUD?",
+        "Buying 500 DKK",
+        "I want to buy 10000 EUR",
+        "How much for 15300 GBP?",
+        "Buying 535 DKK",
+        "How much to buy 599 JPY?",
+        "How much for 10 CAD?",
+        "Buying 5 AUD",
+        "How much to buy 2000 NOK?",
+        "I want to buy 5000 SEK",
+        "Buying 100 CHF",
+        "How much for 7000 CZK?",
+        "I want to buy 3000 HUF",
+        "How much for 400 PLN?",
+        "Buying 800 RUB",
+        "How much to buy 1000 CNY?",
+        "I want to buy 2500 BGN",
+        "How much for 1500 UAH?",
+        "Buying 200 ILS",
+        "How much to buy 3000 TRY?",
+        "I want to buy 5000 GEL",
+        "How much for 7000 KRW?",
+        "Buying 800 EGP",
+        "How much to buy 1000 AED?"
+      ],
+      "responses": ["To buy {amount} {currency}, you need to pay {cost} PLN."]
+    },
+    {
+      "tag": "sell_currency",
+      "patterns": [
+        "I want to sell 800 EUR",
+        "How much will I get for 70 USD?",
+        "Selling 200 AUD",
+        "Selling 861 NOK",
+        "How much for selling 10000 GBP?",
+        "Selling 390 EUR",
+        "I want to exchange 1000 SEK",
+        "How much for selling 2000 NOK?",
+        "Selling 5000 SEK",
+        "I want to sell 100 CHF",
+        "How much for 7000 CZK?",
+        "Selling 3000 HUF",
+        "How much for 400 PLN?",
+        "Selling 800 RUB",
+        "How much for selling 1000 CNY?",
+        "I want to sell 2500 BGN",
+        "How much for 1500 UAH?",
+        "Selling 200 ILS",
+        "How much for selling 3000 TRY?",
+        "I want to sell 5000 GEL",
+        "How much for 7000 KRW?",
+        "Selling 800 EGP",
+        "How much for selling 1000 AED?"
+      ],
+      "responses": [
+        "By selling {amount} {currency}, you will receive {return_amount} PLN."
+      ]
+    },
+    {
+      "tag": "availability",
+      "patterns": [
+        "Do you have 800 EUR?",
+        "Can I get 7000 USD?",
+        "Available 200 AUD?",
+        "Can I exchange 5000 SEK?",
+        "Is 10000 JPY available?",
+        "Do you have 1000 USD?",
+        "Can I buy 15000 NOK?",
+        "Do you have 3000 CHF?",
+        "Is 40000 HUF available?",
+        "Can I get 50 CAD?",
+        "Do you have 1500 EUR?",
+        "Can I buy 10000 USD?",
+        "Do you have 2500 CHF?",
+        "Do you have 30000 SEK?",
+        "Do you have 5000 NOK?",
+        "Do you have 20000 HUF?",
+        "Do you have 100 CAD?",
+        "Can I buy 2500 AUD?",
+        "Do you have 5000 JPY?",
+        "Is 12000 PLN available?",
+        "Can I exchange 300 EUR?",
+        "Do you have 2000 NOK?",
+        "Can I buy 5000 SEK?",
+        "Do you have 100 CHF?",
+        "Is 7000 CZK available?",
+        "Do you have 3000 HUF?",
+        "Do you have 400 PLN?",
+        "Is 800 RUB available?",
+        "Can I buy 1000 CNY?",
+        "Do you have 2500 BGN?",
+        "Can I buy 1500 UAH?",
+        "Do you have 200 ILS?",
+        "Do you have 3000 TRY?",
+        "Can I buy 5000 GEL?",
+        "Is 7000 KRW available?",
+        "Do you have 800 EGP?",
+        "Can I buy 1000 AED?"
+      ],
+      "responses": ["We have enough to sell you {amount} {currency}."]
+    },
+    {
+      "tag": "jokes",
+      "patterns": [
+        "Tell me a joke",
+        "Do you know any jokes?",
+        "Make me laugh",
+        "Tell me a currency joke",
+        "Do you have any funny jokes about exchanges?",
+        "Do you know any money jokes?",
+        "Do you know a funny joke?"
+      ],
+      "responses": [
+        "Why couldn't the dollar find a job? It didn't have enough cents!",
+        "Why do currencies never get lost? Because they always know the exchange rate!"
+      ]
+    },
+    {
+      "tag": "phone_number",
+      "patterns": [
+        "What is your phone number?",
+        "How can I contact you?",
+        "Give me your contact number",
+        "How can I call you?",
+        "Phone number",
+        "How can I reach you by phone?",
+        "Can you provide your phone number?",
+        "What is your number?"
+      ],
+      "responses": ["You can reach us at +48 123 456 789."]
+    },
+    {
+      "tag": "capabilities",
+      "patterns": [
+        "What can you do?",
+        "What are your skills?",
+        "How can you help me?",
+        "What features do you have?",
+        "What are your abilities?",
+        "What can you offer?",
+        "What can you do for me?",
+        "What services do you provide?",
+        "What help can I expect from you?"
+      ],
+      "responses": [
+        "I can assist you with currency exchange rates, availability of currencies, and more.",
+        "I can help you check currency exchange rates, currency availability, information about currencies and countries, office location, opening hours, and payment methods. I can also tell some jokes!"
+      ]
+    },
+    {
+      "tag": "identity",
+      "patterns": [
+        "Who are you?",
+        "What are you?",
+        "Tell me about yourself",
+        "Who can you be?",
+        "Who are you really?",
+        "Tell me who you are",
+        "Who are you, bot?",
+        "Who are you, chatbot?",
+        "Who are you actually?"
+      ],
+      "responses": [
+        "I am a chatbot here to help you with currency exchange queries and more.",
+        "I am an assistant for currency exchange. I can help you find information about exchange rates, currencies, and our office.",
+        "I am a virtual assistant that answers questions related to currency exchange and provides information about our exchange office."
+      ]
+    }
+  ]
+}

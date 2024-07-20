@@ -1,0 +1,14 @@
+User: Czesc
+Bot: Witaj, dziękujemy za odwiedziny!
+
+User: Kim jesteś?
+Bot: Jestem asystentem do spraw wymiany walut. Pomogę Ci znaleźć informacje o kursach, walutach i kantorze.
+
+User: Co potrafisz?
+Bot: Pomogę Ci sprawdzić kursy walut, dostępność walut, informacje o walutach i krajach, lokalizację kantoru, godziny otwarcia i metody płatności.
+
+User: Jaki jest aktualny kurs GBP?
+Bot: Aktualny kurs GBP to:
+Kupno 5.0645 PLN,
+Sprzedaż 5.1662 PLN.
+

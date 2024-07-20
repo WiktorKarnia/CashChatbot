@@ -1,0 +1,6 @@
+User: W jakim państwie używa się CZK? [-!--------------problematic--------------!-]
+Bot: Nie rozumiem...
+
+User: W jakim kraju używa się CZK?
+Bot: Kraj używający waluty Korona czeska (CZK) to Czechy.
+

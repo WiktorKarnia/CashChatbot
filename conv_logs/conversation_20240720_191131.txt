@@ -1,0 +1,12 @@
+User: czesc
+Bot: Cześć, w czym mogę pomóc?
+
+User: co potrafisz?
+Bot: Możesz mnie zapytać o kursy walut, wymianę walut, dostępność walut, godziny otwarcia kantoru, lokalizację i metody płatności. Mam też kilka śmiesznych żartów!
+
+User: kim jestes?
+Bot: Jestem asystentem do spraw wymiany walut. Pomogę Ci znaleźć informacje o kursach, walutach i kantorze.
+
+User: Gdzie używa się JRA? [-!--------------problematic--------------!-]
+Bot: Nie rozumiem...
+

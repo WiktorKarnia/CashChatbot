@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exchange Rates</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f0f2f5;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      h1 {
+        color: #333;
+      }
+      .currency-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        width: 80%;
+        max-width: 1000px;
+        margin: 20px auto;
+        justify-content: center;
+      }
+      .card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        text-align: center;
+      }
+      .card .currency {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+      .card .rate {
+        font-size: 1.2em;
+        margin: 5px 0;
+      }
+      .card .label {
+        font-size: 0.9em;
+        color: #555;
+      }
+      .show-more-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      .show-more-button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Chatbot</title>
+      <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+      />
+    </head>
+    <body>
+      <header>
+        <h1>CurrencyExchange</h1>
+      </header>
+      <div class="currency-container" id="exchangeContainer">
+        <!-- Cards will be populated by JavaScript -->
+      </div>
+      <button class="show-more-button" id="toggleButton">Show More</button>
+
+      <script
+        type="text/javascript"
+        src="{{ url_for('static', filename='app.js') }}"
+      ></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const apiURL = "https://api.exchangerate-api.com/v4/latest/PLN";
+          const toggleButton = document.getElementById("toggleButton");
+          const container = document.getElementById("exchangeContainer");
+          let hiddenCards;
+
+          const currencyFlags = {
+            USD: "us",
+            EUR: "eu",
+            GBP: "gb",
+            JPY: "jp",
+            AUD: "au",
+            CHF: "ch",
+            CAD: "ca",
+            CNY: "cn",
+            NOK: "no",
+            SEK: "se",
+            DKK: "dk",
+            CZK: "cz",
+            HUF: "hu",
+            ALL: "al",
+            RON: "ro",
+            RUB: "ru",
+            BGN: "bg",
+            UAH: "ua",
+            ILS: "il",
+            TRY: "tr",
+            GEL: "ge",
+            KRW: "kr",
+            EGP: "eg",
+            AED: "ae",
+          };
+
+          fetch(apiURL)
+            .then((response) => response.json())
+            .then((data) => {
+              const rates = data.rates;
+              const dailyChanges = {
+                /* Add daily change data here */
+              };
+              const currencies = [
+                "USD",
+                "EUR",
+                "GBP",
+                "CHF",
+                "SEK",
+                "NOK",
+                "DKK",
+                "CAD",
+                "AUD",
+                "CZK",
+                "HUF",
+                "JPY",
+                "ALL",
+                "RON",
+                "RUB",
+                "CNY",
+                "BGN",
+                "UAH",
+                "ILS",
+                "TRY",
+                "GEL",
+                "KRW",
+                "EGP",
+                "AED",
+              ]; // You can add or remove currencies as needed
+
+              currencies.forEach((currency, index) => {
+                const rate = rates[currency];
+                const dailyChange = dailyChanges[currency] || 0; // Replace with actual daily change data
+                const buyPrice = ((1 / rate) * 0.995).toFixed(4); // Buying 1 unit of currency
+                const sellPrice = ((1 / rate) * 1.015).toFixed(4); // Selling 1 unit of currency
+                const card = document.createElement("div");
+                card.classList.add("card");
+                const changeColor = dailyChange >= 0 ? "green" : "red";
+                const changeSign = dailyChange >= 0 ? "+" : "";
+                card.innerHTML = `
+                              <img class="flag" src="https://countryflagsapi.com/png/${
+                                currencyFlags[currency]
+                              }" alt="${currency} flag">
+                              <div class="currency">${currency}/PLN</div>
+                              <div class="daily-change" style="color: ${changeColor};">${changeSign}${dailyChange.toFixed(
+                  4
+                )} (${((dailyChange / rate) * 100).toFixed(2)}%)</div>
+                              <div class="rate label">kupno</div>
+                              <div class="rate">${buyPrice}</div>
+                              <div class="rate label">sprzedaż</div>
+                              <div class="rate">${sellPrice}</div>
+                          `;
+                if (index >= Math.ceil(currencies.length / 2)) {
+                  card.classList.add("hidden-card");
+                }
+                container.appendChild(card);
+              });
+
+              hiddenCards = document.querySelectorAll(".hidden-card");
+              hiddenCards.forEach((card) => {
+                card.style.display = "none";
+              });
+            })
+            .catch((error) => console.error("Error fetching data:", error));
+
+          toggleButton.addEventListener("click", function () {
+            hiddenCards.forEach((card) => {
+              card.style.display =
+                card.style.display === "none" ? "block" : "none";
+            });
+
+            toggleButton.textContent =
+              toggleButton.textContent === "Show More"
+                ? "Show Less"
+                : "Show More";
+          });
+        });
+      </script>
+    </body>
+  </html>
+</html>

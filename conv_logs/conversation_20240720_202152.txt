@@ -1,0 +1,18 @@
+User: Jakie waluty używa Meksyk?
+Bot: Waluta używana w Meksyk to Peso meksykańskie (MXN).
+
+User: Gdzie używa się MXN?
+Bot: Kraj używający waluty Peso meksykańskie (MXN) to Meksyk.
+
+User: Chciałbym kupić 12353 UDS
+Bot: Proszę podać prawidłową walutę i kwotę. Użyj właściwego kodu waluty i pamiętaj o przerwie między kwotą a kodem.
+
+User: Chciałbym kupić 214456 USD
+Bot: Za 214456.00 USD musisz zapłacić 857500.39 PLN.
+
+User: Sprzedaję 1346325 HUF
+Bot: Sprzedając 1346325.00 HUF otrzymasz 14695.34 PLN.
+
+User: Czy mogę kupic u was 12000 EUR?
+Bot: Mamy wystarczającą kwotę by sprzedać 12000.00 EUR.
+

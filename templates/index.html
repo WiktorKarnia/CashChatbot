@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chatbot</title>
+    <style>
+      .send__button img {
+        transition: all 0.3s ease-in-out;
+      }
+
+      .send__button:hover img {
+        content: url("{{ url_for('static', filename='images/send.png') }}");
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CurrencyExchange</h1>
+    </header>
+    <div class="currency-container" id="exchangeContainer">
+      <!-- Cards will be populated by JavaScript -->
+    </div>
+    <button class="show-more-button" id="toggleButton">Show More</button>
+
+    <div class="container">
+      <div class="chatbox">
+        <div class="chatbox__support">
+          <div class="chatbox__header">
+            <div class="chatbox__image--header">
+              <img
+                src="https://img.icons8.com/?size=100&id=7sgt5A3gnIg8&format=png&color=13a9ff"
+                alt="image"
+              />
+            </div>
+            <div class="chatbox__content--header">
+              <h4 class="chatbox__heading--header">Pomocnik Cash</h4>
+              <p class="chatbox__description--header">
+                Witaj! Mam na imię Cash.
+              </p>
+              <p class="chatbox__description--header">Jak mogę Ci pomóc?</p>
+            </div>
+          </div>
+          <div class="chatbox__messages">
+            <div></div>
+          </div>
+          <div class="chatbox__footer">
+            <input type="text" placeholder="Write a message..." />
+            <button class="chatbox__send--footer send__button">
+              <img
+                src="{{ url_for('static', filename='/images/send2.png') }}"
+                alt="send"
+                hight="35px"
+                width="30px"
+              />
+            </button>
+          </div>
+        </div>
+        <div class="chatbox__button">
+          <button>
+            <img
+              src="{{ url_for('static', filename='images/chatbox-icon.svg') }}"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__content">
+        <p><strong>Lokalizacja:</strong> ul. Główna 123, Warszawa</p>
+        <p><strong>Telefon:</strong> +48 123 456 789</p>
+        <p><strong>Godziny otwarcia:</strong> Pon - Pt: 9:00 - 18:00</p>
+      </div>
+    </footer>
+
+    <script>
+      $SCRIPT_ROOT = {{ request.script_root|tojson }};
+    </script>
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='app.js') }}"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const apiURL = "https://api.exchangerate-api.com/v4/latest/PLN";
+        const toggleButton = document.getElementById("toggleButton");
+        const container = document.getElementById("exchangeContainer");
+        let hiddenCards;
+
+        fetch(apiURL)
+          .then((response) => response.json())
+          .then((data) => {
+            const rates = data.rates;
+            const currencies = [
+              "USD",
+              "EUR",
+              "GBP",
+              "CHF",
+              "SEK",
+              "NOK",
+              "DKK",
+              "CAD",
+              "AUD",
+              "CZK",
+              "HUF",
+              "JPY",
+              "ALL",
+              "RON",
+              "RUB",
+              "CNY",
+              "BGN",
+              "UAH",
+              "ILS",
+              "TRY",
+              "GEL",
+              "KRW",
+              "EGP",
+              "AED",
+            ];
+
+            currencies.forEach((currency, index) => {
+              const rate = rates[currency];
+              const buyPrice = ((1 / rate) * 0.995).toFixed(4);
+              const sellPrice = ((1 / rate) * 1.015).toFixed(4);
+              const card = document.createElement("div");
+              card.classList.add("card");
+              card.innerHTML = `
+                                <div class="currency">${currency}/PLN</div>
+                                <div class="rate label">kupno</div>
+                                <div class="rate">${buyPrice}</div>
+                                <div class="rate label">sprzedaż</div>
+                                <div class="rate">${sellPrice}</div>
+                            `;
+              if (index >= Math.ceil(currencies.length / 2)) {
+                card.classList.add("hidden-card");
+              }
+              container.appendChild(card);
+            });
+
+            hiddenCards = document.querySelectorAll(".hidden-card");
+            hiddenCards.forEach((card) => {
+              card.style.display = "none";
+            });
+          })
+          .catch((error) => console.error("Error fetching data:", error));
+
+        toggleButton.addEventListener("click", function () {
+          hiddenCards.forEach((card) => {
+            card.style.display =
+              card.style.display === "none" ? "block" : "none";
+          });
+
+          toggleButton.textContent =
+            toggleButton.textContent === "Show More"
+              ? "Show Less"
+              : "Show More";
+        });
+      });
+    </script>
+  </body>
+</html>
