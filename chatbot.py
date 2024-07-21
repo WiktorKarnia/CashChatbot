@@ -24,6 +24,21 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
+intent_to_function = {
+    "kursy": rate_question,
+    "exchange_rate": rate_question,
+    "kraj_waluta": countries_currency,
+    "country_currency": countries_currency,
+    "waluta_kraj": currency_country,
+    "currency_country": currency_country,
+    "kupno": buy_calculator,
+    "buy_currency": buy_calculator,
+    "sprzedaz": sell_calculator,
+    "sell_currency": sell_calculator,
+    "dostepnosc": check_availability,
+    "availability": check_availability
+}
+
 bot_name = "Cash"
 
 def get_response(msg):
@@ -45,21 +60,10 @@ def get_response(msg):
     if prob.item() > 0.90:
         for intent in intents['intents']:
             if tag == intent["tag"]:
-                # Call the appropriate function based on the intent
-                if tag in ["kursy", "exchange_rate"]:
-                    return rate_question(sentence, language)
-                elif tag in ["kraj_waluta", "country_currency"]:
-                    return countries_currency(sentence, language)
-                elif tag in ["waluta_kraj", "currency_country"]:
-                    return currency_country(sentence, language)
-                elif tag in ["kupno", "buy_currency"]:
-                    return buy_calculator(sentence, language)
-                elif tag in ["sprzedaz", "sell_currency"]:
-                    return sell_calculator(sentence, language)
-                elif tag in ["dostepnosc", "availability"]:
-                    return check_availability(sentence, language)
-                # For other intents, return a random response
-                return random.choice(intent['responses'])
+                if tag in intent_to_function:
+                    return intent_to_function[tag](sentence, language)
+                else:
+                    return random.choice(intent['responses'])
 
     # Fallback response if the intent is not confidently identified
     return "Nie rozumiem..." if language == 'polish' else "I don't understand..."
