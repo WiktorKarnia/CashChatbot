@@ -13,7 +13,7 @@ load_dotenv('.config')
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 TELEGRAM_API_URL = f'https://api.telegram.org/bot{TELEGRAM_TOKEN}/'
 
-NGROK_URL = 'https://522f-83-10-32-161.ngrok-free.app'  # Zmiana na aktualny link ngrok
+NGROK_URL = 'https://0782-83-10-33-25.ngrok-free.app'  # Zmiana na aktualny link ngrok
 
 # Ustawienie webhooka dla bota Telegram
 def set_webhook():
@@ -47,5 +47,5 @@ def send_message(chat_id, text):
 
 # Uruchomienie aplikacji
 if __name__ == "__main__":
-    # set_webhook()  # Ustawienie za każdym razem gdy zmienia się link ngrok
+    set_webhook()  # Ustawienie za każdym razem gdy zmienia się link ngrok
     app.run(port=5000, debug=True)

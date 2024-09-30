@@ -25,7 +25,7 @@ currency_names_eng = {}
 all_currencies_eng = []
 
 # Załadowanie danych krajów i walut z pliku CSV
-with open('./misc/countries_currencies_pl.csv', mode='r', encoding='utf-8') as file:
+with open('countries_currencies_pl.csv', mode='r', encoding='utf-8') as file:
     reader = csv.DictReader(file)
     for row in reader:
         country = row['country']
@@ -36,7 +36,7 @@ with open('./misc/countries_currencies_pl.csv', mode='r', encoding='utf-8') as f
         currency_names_pl[code] = currency
         all_currencies_pl.append(code)
         
-with open('./misc/countries_currencies_eng.csv', mode='r', encoding='utf-8') as file:
+with open('countries_currencies_eng.csv', mode='r', encoding='utf-8') as file:
     reader = csv.DictReader(file)
     for row in reader:
         country = row['country']
@@ -48,7 +48,7 @@ with open('./misc/countries_currencies_eng.csv', mode='r', encoding='utf-8') as 
         all_currencies_eng.append(code)
 
 # Załadowanie dostępnych walut z pliku JSON
-with open('./misc/available_currencies.json', 'r', encoding='utf-8') as json_data:
+with open('available_currencies.json', 'r', encoding='utf-8') as json_data:
     available_currencies = json.load(json_data)
 
 # Funkcja usuwająca polskie znaki diakrytyczne

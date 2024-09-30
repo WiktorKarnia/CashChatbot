@@ -24,7 +24,9 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-intent_to_function = {
+bot_name = "Cash"
+
+intent_mapping = {
     "kursy": rate_question,
     "exchange_rate": rate_question,
     "kraj_waluta": countries_currency,
@@ -36,21 +38,20 @@ intent_to_function = {
     "sprzedaz": sell_calculator,
     "sell_currency": sell_calculator,
     "dostepnosc": check_availability,
-    "availability": check_availability
+    "availability": check_availability,
 }
 
-bot_name = "Cash"
 
 def get_response(msg):
     language = detect_language(msg)
     if language == 'polish':
         msg = remove_polish_diacritics(msg)
     sentence = tokenize(msg, language=language)
-    X = bag_of_words(sentence, all_words, language=language)
-    X = X.reshape(1, X.shape[0])
-    X = torch.from_numpy(X).to(device)
+    data = bag_of_words(sentence, all_words, language=language)
+    data = data.reshape(1, data.shape[0])
+    data = torch.from_numpy(data).to(device)
 
-    output = model(X)
+    output = model(data)
     _, predicted = torch.max(output, dim=1)
 
     tag = tags[predicted.item()]
@@ -59,17 +60,16 @@ def get_response(msg):
     prob = probs[0][predicted.item()]
     if prob.item() > 0.90:
         for intent in intents['intents']:
-            if tag == intent["tag"]:
-                if tag in intent_to_function:
-                    return intent_to_function[tag](sentence, language)
-                else:
-                    return random.choice(intent['responses'])
+            if tag in intent_mapping:
+                return intent_mapping[tag](sentence, language)
+            else:
+                return random.choice(intent['responses'])
 
     # Fallback response if the intent is not confidently identified
     return "Nie rozumiem..." if language == 'polish' else "I don't understand..."
 
 if __name__ == "__main__":
-    print("Let's chat! (type 'quit' to exit)")
+    print("Cześć jestem Cash! W czym mogę pomóc?")
     conversation = []
     while True:
         sentence = input("You: ")
