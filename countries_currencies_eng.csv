@@ -1,0 +1,74 @@
+country,currency,code
+United States,Dollar,USD
+Eurozone,Euro,EUR
+United Kingdom,Pound sterling,GBP
+Switzerland,Swiss franc,CHF
+Sweden,Swedish krona,SEK
+Norway,Norwegian krone,NOK
+Denmark,Danish krone,DKK
+Canada,Canadian dollar,CAD
+Australia,Australian dollar,AUD
+Czechia,Czech koruna,CZK
+Hungary,Hungarian forint,HUF
+Japan,Japanese yen,JPY
+Albania,Albanian lek,ALL
+Romania,Romanian leu,RON
+Russia,Russian ruble,RUB
+China,Chinese yuan,CNY
+Bulgaria,Bulgarian lev,BGN
+Ukraine,Ukrainian hryvnia,UAH
+Israel,Israeli new shekel,ILS
+Turkey,Turkish lira,TRY
+Georgia,Georgian lari,GEL
+South Korea,South Korean won,KRW
+Egypt,Egyptian pound,EGP
+United Arab Emirates,UAE dirham,AED
+Argentina,Argentine peso,ARS
+Brazil,Brazilian real,BRL
+Chile,Chilean peso,CLP
+Colombia,Colombian peso,COP
+Mexico,Mexican peso,MXN
+Peru,Peruvian sol,PEN
+India,Indian rupee,INR
+Indonesia,Indonesian rupiah,IDR
+Malaysia,Malaysian ringgit,MYR
+Philippines,Philippine peso,PHP
+Singapore,Singapore dollar,SGD
+Thailand,Thai baht,THB
+Vietnam,Vietnamese dong,VND
+South Africa,South African rand,ZAR
+Nigeria,Nigerian naira,NGN
+Kenya,Kenyan shilling,KES
+Ghana,Ghanaian cedi,GHS
+Saudi Arabia,Saudi riyal,SAR
+Pakistan,Pakistani rupee,PKR
+Bangladesh,Bangladeshi taka,BDT
+Sri Lanka,Sri Lankan rupee,LKR
+New Zealand,New Zealand dollar,NZD
+Hong Kong,Hong Kong dollar,HKD
+Taiwan,Taiwan dollar,TWD
+Austria,Euro,EUR
+Belgium,Euro,EUR
+Cyprus,Euro,EUR
+Estonia,Euro,EUR
+Finland,Euro,EUR
+France,Euro,EUR
+Germany,Euro,EUR
+Greece,Euro,EUR
+Ireland,Euro,EUR
+Italy,Euro,EUR
+Latvia,Euro,EUR
+Lithuania,Euro,EUR
+Luxembourg,Euro,EUR
+Malta,Euro,EUR
+Netherlands,Euro,EUR
+Portugal,Euro,EUR
+Slovakia,Euro,EUR
+Slovenia,Euro,EUR
+Spain,Euro,EUR
+Poland,Zloty,PLN
+Czechia,Czech koruna,CZK
+Hungary,Hungarian forint,HUF
+Romania,Romanian leu,RON
+Bulgaria,Bulgarian lev,BGN
+Croatia,Croatian kuna,HRK
